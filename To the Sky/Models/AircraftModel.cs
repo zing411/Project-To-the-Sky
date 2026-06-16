@@ -12,6 +12,9 @@ public class AircraftModel
     // Manufacturer of the aircraft
     public string Manufacturer { get; set; }
     
+    // Category of aircraft
+    public string Category { get; set; }
+    
     // the country of origin 
     public string Country { get; set; }
     

@@ -19,10 +19,10 @@ public class AircraftModel
     public string Country { get; set; }
     
     // first flight
-    public string FirstFlightNumber { get; set; }
+    public string FirstFlight { get; set; }
     
     // last flight if applicable  
-    public string LastFlightNumber { get; set; }
+    public string LastFlight { get; set; }
     
     // description of the aircraft
     public string Description { get; set; }

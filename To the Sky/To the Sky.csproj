@@ -7,10 +7,4 @@
         <RootNamespace>To_the_Sky</RootNamespace>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Views\About\" />
-      <Folder Include="Views\DetailedPage\" />
-      <Folder Include="Views\Gallery\" />
-    </ItemGroup>
-
 </Project>

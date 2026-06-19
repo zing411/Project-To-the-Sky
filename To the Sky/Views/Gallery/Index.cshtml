@@ -1,0 +1,34 @@
+﻿@model List<To_the_Sky.Models.AircraftModel>
+
+@{
+	ViewData["Title"] = "Gallery";
+}
+
+<h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
+
+@if (Model == null || !Model.Any())
+{
+	<p>No aircraft available right now.</p>
+}
+else
+{
+	<div class="row g-4">
+		@foreach (var aircraft in Model)
+		{
+			<div class="col-12 col-md-6">
+				<div class="card h-100 shadow-sm">
+					<img src="@aircraft.ImageUrl" class="card-img-top" alt="@aircraft.Name" style="height: 240px; object-fit: cover;" />
+					<div class="card-body">
+						<h5 class="card-title">@aircraft.Name</h5>
+						<p class="card-text mb-2"><strong>Manufacturer:</strong> @aircraft.Manufacturer</p>
+						<p class="card-text mb-2"><strong>Category:</strong> @aircraft.Category</p>
+						<p class="card-text mb-2"><strong>Country:</strong> @aircraft.Country</p>
+						<p class="card-text mb-2"><strong>First Flight:</strong> @aircraft.FirstFlight</p>
+						<p class="card-text mb-2"><strong>Last Flight:</strong> @aircraft.LastFlight</p>
+						<p class="card-text">@aircraft.Description</p>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+}

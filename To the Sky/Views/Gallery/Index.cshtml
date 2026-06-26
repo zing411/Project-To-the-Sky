@@ -4,6 +4,36 @@
 	ViewData["Title"] = "Gallery";
 }
 
+<style>
+    div.gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    div.gallery-item {
+        margin: 5px;
+        border: 1px solid #ccc;
+        width: 300px;
+    }
+
+    div.gallery-item:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery-item img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    div.gallery-item div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+
 <h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
 
 @if (Model == null || !Model.Any())
@@ -12,23 +42,46 @@
 }
 else
 {
-	<div class="row g-4">
+		<div class="gallery">
 		@foreach (var aircraft in Model)
 		{
-			<div class="col-12 col-md-6">
-				<div class="card h-100 shadow-sm">
-					<img src="@aircraft.ImageUrl" class="card-img-top" alt="@aircraft.Name" style="height: 240px; object-fit: cover;" />
+			var collapseId = $"aircraft-{aircraft.Id}";
+
+			<div class="gallery-item">
+				<div class="card shadow-sm h-100">
+
+					<img src="@aircraft.ImageUrl"
+					     class="card-img-top"
+					     alt="@aircraft.Name"
+					     style="height:240px; object-fit:cover; cursor:pointer;"
+					     data-bs-toggle="collapse"
+					     data-bs-target="#@collapseId" />
+
 					<div class="card-body">
+
 						<h5 class="card-title">@aircraft.Name</h5>
-						<p class="card-text mb-2"><strong>Manufacturer:</strong> @aircraft.Manufacturer</p>
-						<p class="card-text mb-2"><strong>Category:</strong> @aircraft.Category</p>
-						<p class="card-text mb-2"><strong>Country:</strong> @aircraft.Country</p>
-						<p class="card-text mb-2"><strong>First Flight:</strong> @aircraft.FirstFlight</p>
-						<p class="card-text mb-2"><strong>Last Flight:</strong> @aircraft.LastFlight</p>
-						<p class="card-text">@aircraft.Description</p>
+
+						<div class="collapse mt-3" id="@collapseId">
+
+							<p><strong>Manufacturer:</strong> @aircraft.Manufacturer</p>
+
+							<p><strong>Category:</strong> @aircraft.Category</p>
+
+							<p><strong>Country:</strong> @aircraft.Country</p>
+
+							<p><strong>First Flight:</strong> @aircraft.FirstFlight</p>
+
+							<p><strong>Last Flight:</strong> @aircraft.LastFlight</p>
+
+							<hr />
+
+							<p>@aircraft.Description</p>
+
+						</div>
+
 					</div>
 				</div>
 			</div>
 		}
-	</div>
-}
+		</div>
+	}

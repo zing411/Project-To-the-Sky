@@ -1,38 +1,8 @@
-﻿@model List<To_the_Sky.Models.AircraftModel>
+@model List<To_the_Sky.Models.AircraftModel>
 
 @{
 	ViewData["Title"] = "Gallery";
 }
-
-<style>
-    div.gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding: 0;
-    }
-
-    div.gallery-item {
-        margin: 5px;
-        border: 1px solid #ccc;
-        width: 300px;
-    }
-
-    div.gallery-item:hover {
-        border: 1px solid #777;
-    }
-
-    div.gallery-item img {
-        width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    div.gallery-item div.desc {
-        padding: 15px;
-        text-align: center;
-    }
-</style>
 
 <h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
 
@@ -42,46 +12,26 @@
 }
 else
 {
-		<div class="gallery">
+	<div class="gallery-grid">
 		@foreach (var aircraft in Model)
 		{
-			var collapseId = $"aircraft-{aircraft.Id}";
-
-			<div class="gallery-item">
-				<div class="card shadow-sm h-100">
-
-					<img src="@aircraft.ImageUrl"
-					     class="card-img-top"
-					     alt="@aircraft.Name"
-					     style="height:240px; object-fit:cover; cursor:pointer;"
-					     data-bs-toggle="collapse"
-					     data-bs-target="#@collapseId" />
-
-					<div class="card-body">
-
-						<h5 class="card-title">@aircraft.Name</h5>
-
-						<div class="collapse mt-3" id="@collapseId">
-
-							<p><strong>Manufacturer:</strong> @aircraft.Manufacturer</p>
-
-							<p><strong>Category:</strong> @aircraft.Category</p>
-
-							<p><strong>Country:</strong> @aircraft.Country</p>
-
-							<p><strong>First Flight:</strong> @aircraft.FirstFlight</p>
-
-							<p><strong>Last Flight:</strong> @aircraft.LastFlight</p>
-
-							<hr />
-
-							<p>@aircraft.Description</p>
-
-						</div>
-
-					</div>
+			<article class="aircraft-card">
+				<div class="aircraft-card__image">
+					<img src="@aircraft.ImageUrl" alt="@aircraft.Name">
 				</div>
-			</div>
+				<div class="aircraft-card__body">
+					<h5 class="aircraft-card__title">@aircraft.Name</h5>
+					<p class="aircraft-card__text">@aircraft.Description</p>
+					<dl class="aircraft-card__meta">
+						<div><dt>Manufacturer</dt><dd>@aircraft.Manufacturer</dd></div>
+						<div><dt>Category</dt><dd>@aircraft.Category</dd></div>
+						<div><dt>Country</dt><dd>@aircraft.Country</dd></div>
+						<div><dt>First Flight</dt><dd>@aircraft.FirstFlight</dd></div>
+						<div><dt>Last Flight</dt><dd>@aircraft.LastFlight</dd></div>
+					</dl>
+					<a class="aircraft-card__link" asp-controller="Aircraft" asp-action="Detailed" asp-route-id="@aircraft.Id">Read More</a>
+				</div>
+			</article>
 		}
-		</div>
-	}
+	</div>
+}

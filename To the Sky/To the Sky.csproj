@@ -7,4 +7,8 @@
         <RootNamespace>To_the_Sky</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\DetailedPage\Index.cshtml" />
+    </ItemGroup>
+
 </Project>

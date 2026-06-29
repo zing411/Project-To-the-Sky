@@ -1,6 +1,85 @@
-﻿namespace To_the_Sky.Views.Gallery;
+@model To_the_Sky.Models.AircraftModel
 
-public class Detailed
-{
-    
+@{
+    ViewData["Title"] = Model.Name;
 }
+
+<section class="hero-section mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4">@Model.Name</h1>
+                <p class="lead">@Model.DetailedDescription</p>
+                <dl class="row">
+                    <dt class="col-sm-4">Manufacturer</dt>
+                    <dd class="col-sm-8">@Model.Manufacturer</dd>
+                    <dt class="col-sm-4">Category</dt>
+                    <dd class="col-sm-8">@Model.Category</dd>
+                    <dt class="col-sm-4">Country</dt>
+                    <dd class="col-sm-8">@Model.Country</dd>
+                    <dt class="col-sm-4">First Flight</dt>
+                    <dd class="col-sm-8">@Model.FirstFlight</dd>
+                    <dt class="col-sm-4">Last Flight</dt>
+                    <dd class="col-sm-8">@Model.LastFlight</dd>
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="history">
+    <h2>History</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">@Model.History</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="development">
+    <h2>Development</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">@Model.Development</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="specifications">
+    <h2>Specifications</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">@Model.Specifications</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="operators">
+    <h2>Operators</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">@Model.Operators</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="operational-history">
+    <h2>Operational History</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">@Model.OperationalHistory</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5" id="image-more">
+    <h2>More Images</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <img src="@Model.ImageUrlMore" alt="@Model.Name additional image" class="img-fluid rounded">
+        </div>
+    </div>
+</section>

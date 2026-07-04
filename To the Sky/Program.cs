@@ -1,9 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using To_the_Sky.Data;
+using To_the_Sky.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Register SQLite database context with dependency injection
+builder.Services.AddDbContext<AppDBContexts>( options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDBContexts>();
+    db.Database.EnsureCreated();
+    db.Database.ExecuteSqlRaw("PRAGMA wal_checkpoint(TRUNCATE);");
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

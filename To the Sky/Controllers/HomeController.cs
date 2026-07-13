@@ -1,12 +1,10 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using To_the_Sky.Models;
-
 namespace To_the_Sky.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
+    
+    public async Task<IActionResult> Index()
     {
         return View();
     }
@@ -14,11 +12,5 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

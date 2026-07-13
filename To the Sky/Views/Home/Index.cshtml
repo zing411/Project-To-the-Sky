@@ -1,8 +1,34 @@
-﻿@{
+﻿@model List<To_the_Sky.Models.AircraftModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<!-- Slideshow --> 
+<section class="container">
+    <div class="slide-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="https://plus.unsplash.com/premium_photo-1661939833710-6a7548ceacb9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Aircraft Image 1" />
+            <img id="slide-2" src="https://images.unsplash.com/photo-1551796880-ddd03f861ae7?q=80&w=1128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Aircraft Image 2" />
+            <img id="slide-3" src="https://images.unsplash.com/photo-1516998471356-b72810b28b9d?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Aircraft Image 3" />
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Text box -->
+<div class="text-box">
+    <h2>About the Aircraft</h2>
+    <p>This is a sample text box that can be used to provide additional information about the aircraft displayed in the slideshow above.</p>
+    <h4>Disclaimer</h4>
+    <p>The following information provided is public.</p>
 </div>

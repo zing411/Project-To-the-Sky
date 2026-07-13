@@ -6,6 +6,15 @@
 
 <h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
 
+
+<div class="search-container"> 
+<form method="get" asp-action="Index" class="search-form">
+	<input type="text" name="searchTerm" value="@ViewData["CurrentFilter"]" placeholder="Search aircraft..." class="search-input" />
+	<button type="submit" class="search-button">Search</button>
+</form>
+</div>
+
+
 @if (Model == null || !Model.Any())
 {
 	<p>No aircraft available right now.</p>

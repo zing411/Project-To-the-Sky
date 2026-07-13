@@ -19,6 +19,7 @@ public class AircraftController : Controller
         var aircraft = await _context.Aircraft.ToListAsync();
         return View("~/Views/Gallery/Index.cshtml", aircraft);
     }
+    
 
     public async Task<IActionResult> Detailed(int id)
     {

@@ -70,9 +70,6 @@ body {
   transform: translateX(-50%);
   z-index: -1;
 }
-/* search bar --------------------------------------------------------------- */
-
-
 
 /* Gallery layout---------------------------------------------------------------
 
@@ -86,12 +83,46 @@ body {
   /* Space between each card */
   gap: 1.5rem;
 
-  /* Align cards to the top of each row */
+  /* align cards to the top of each row */
   align-items: start;
 }
 
-/* Aircraft Card-------------------
+/* about page layout--------------------------------------------------------------- */
 
+.about-page {
+  width: 100%;
+}
+
+.about img {
+  height: auto;
+  width: 420px;
+}
+
+.about-text {
+  width: 550px;
+}
+
+.main {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-text h2 {
+  color: white;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* Aircraft Card-------------------
 
 /*  card container */
 .aircraft-card {

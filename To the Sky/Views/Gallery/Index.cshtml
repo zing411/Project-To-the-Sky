@@ -2,29 +2,42 @@
 
 @{
 	ViewData["Title"] = "Gallery";
+	var aircrafts = Model ?? new List<To_the_Sky.Models.AircraftModel>();
+	var countries = aircrafts.Select(a => a.Country).Distinct().OrderBy(country => country).ToList();
 }
 
 <h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
 
-
-<div class="search-container"> 
-<form method="get" asp-action="Index" class="search-form">
-	<input type="text" name="searchTerm" value="@ViewData["CurrentFilter"]" placeholder="Search aircraft..." class="search-input" />
-	<button type="submit" class="search-button">Search</button>
-</form>
+<!-- Dropdown --> 
+<div id="dropdown" class="dropdown">
+	<button id="dropdownButton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		All Countries
+	</button>
+	<ul id="countryList" class="dropdown-menu">
+		<li><button type="button" class="dropdown-item" data-country="">All Countries</button></li>
+		@foreach (var country in countries)
+		{
+			<li><button type="button" class="dropdown-item" data-country="@country">@country</button></li>
+		}
+	</ul>
 </div>
 
+<p id="galleryEmptyState" class="alert alert-info d-none mt-3 mb-4">
+	No aircraft match the selected country.
+</p>
 
-@if (Model == null || !Model.Any())
+
+<!-- Aircraft gallery --> 
+@if (!aircrafts.Any())
 {
 	<p>No aircraft available right now.</p>
 }
 else
 {
 	<div class="gallery-grid">
-		@foreach (var aircraft in Model)
+		@foreach (var aircraft in aircrafts)
 		{
-			<article class="aircraft-card">
+			<article class="aircraft-card" data-country="@aircraft.Country">
 				<div class="aircraft-card__image">
 					<img src="@aircraft.ImageUrl" alt="@aircraft.Name">
 				</div>

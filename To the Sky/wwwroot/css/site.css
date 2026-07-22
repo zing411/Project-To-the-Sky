@@ -28,6 +28,28 @@ body {
   margin-bottom: 60px;
 }
 
+.text-box {
+  color:#E8ECF1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+/* background image ---------------------------------------- */
+
+
+
+/* background image global */
+body.background-image {
+  background-image: url("/Images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 
 /* slideshow ---------------------------------------- */
 
@@ -77,49 +99,72 @@ body {
 .gallery-grid {
   display: grid;
 
-  /* Automatically creates columns that are at least 240px wide */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
-  /* Space between each card */
   gap: 1.5rem;
 
-  /* align cards to the top of each row */
   align-items: start;
 }
 
-/* about page layout--------------------------------------------------------------- */
+/* About page --------------------------------------------------------------- */
 
 .about-page {
   width: 100%;
+  padding: 40px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;     
+  gap: 40px;               
+  max-width: 1100px;
 }
 
 .about img {
-  height: auto;
   width: 420px;
+  height: auto;
+  border-radius: 10px;     
 }
 
 .about-text {
-  width: 550px;
+  color: #E8ECF1;
+  max-width: 500px;
 }
 
-.main {
-  width: 1130px;
-  max-width: 95%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.about-text h2 {
+.about-title {
   color: white;
   font-size: 80px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
+.about-link {
+  color: #59C3FF;
+  text-decoration: none;
+  font-size: 28px;
+}
 
+.about-link:hover {
+  text-decoration: underline;
+  color: #7BD3FF;
+}
 
+/* Privacy ------------------- */
+
+.privacy-title {
+  color: white;
+  text-transform: uppercase;
+}
+
+.privacy-text {
+  color: #59C3FF;
+}
 
 
 /* Aircraft Card-------------------
@@ -219,6 +264,44 @@ body {
   text-align: right;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+  color: #E8ECF1;
+}
+
+.dropdown {
+  padding: .5rem 1rem;
+}
+
+.card-title {
+  color: #E8ECF1;
+  padding-bottom: 10px;
+}
+
+.col-sm-4 {
+  display: flex;
+  color: #E8ECF1;
+}
+
+.col-sm-8 {
+  display: flex;
+  flex-direction: column;
+  color: #E8ECF1;
+}
+
+.col-sm-4 div {
+  display: flex;
+  color: #E8ECF1;
+}
+
+.display-4 {
+  color: #E8ECF1;
+}
+
+.lead {
+  display: flex;
+  color: #E8ECF1;
+}
 /*  View Details Button------------------------------
   
 

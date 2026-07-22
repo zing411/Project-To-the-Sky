@@ -37,11 +37,12 @@ public class AppDBContexts : DbContext
                 OperationalHistory = "Entered service in 2005 and has remained a cornerstone of U.S. air superiority. And has remained in service until the 2030s",
                 ImageUrlMore = "https://www.lockheedmartin.com/content/dam/lockheed-martin/aero/photo/f22/F-22-1.jpg.pc-adaptive.full.medium.jpg"
             },
+            
             new AircraftModel
             {
                 Id = 2,
                 Name = "Concorde",
-                Manufacturer = "Aero Spacelines/BAC",
+                Manufacturer = "BAC (British Aircraft cooperation)/Aérospatiale",
                 Category = "Passenger",
                 Country = "UK/France",
                 FirstFlight = "1969",
@@ -75,6 +76,26 @@ public class AppDBContexts : DbContext
                 Operators = "Various airlines worldwide",
                 OperationalHistory = "Has been in continuous service since its introduction, with multiple variants developed over the years.",
                 ImageUrlMore = "https://www.flightworx.aero/wp-content/uploads/2022/11/ba747mattcarter-copy.jpg"
+            },
+            
+            new AircraftModel()
+            {
+                Id = 4,
+                Name = "Tu-160 Blackjack",
+                Manufacturer = "Tupolev",
+                Category = "Bomber",
+                Country = "Russia",
+                FirstFlight = "1981",
+                LastFlight = "Active",
+                Description = "A supersonic strategic bomber and the largest and heaviest combat aircraft in the world.",
+                DetailedDescription = "The Tu-160 is a variable-sweep wing heavy bomber capable of carrying nuclear and conventional weapons.",
+                ImageUrl = "https://aerocorner.com/wp-content/uploads/2021/07/Tupolev-Tu-160-Blackjack-1-scaled.jpg",
+                History = "Developed during the Cold War to replace the Tu-95, it remains a key component of Russia's strategic bomber fleet.",
+                Development = "Designed for long-range missions with high speed and payload capacity, featuring variable-sweep wings for versatility.",
+                Specifications = "Twin-engine supersonic bomber with a maximum speed of Mach 2.05 and a range of over 7,000 km.",
+                Operators = "Russian Aerospace Forces",
+                OperationalHistory = "Entered service in 1987 and has been modernized over the years to maintain its strategic capabilities.",
+                ImageUrlMore = "https://ml5psubhxdln.i.optimole.com/cb:78--.b845/w:1667/h:1080/q:96/f:best/https://migflug.com/wp-content/uploads/2026/07/tupolev-tu-160-blackjack-formation-flight.jpg"
             });
     }
 }

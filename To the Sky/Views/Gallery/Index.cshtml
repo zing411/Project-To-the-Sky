@@ -5,8 +5,8 @@
 	var aircrafts = Model ?? new List<To_the_Sky.Models.AircraftModel>();
 	var countries = aircrafts.Select(a => a.Country).Distinct().OrderBy(country => country).ToList();
 }
-
-<h1 class="mb-4">Aircraft Gallery (Temporary Data)</h1>
+<body class="background-image">
+<h1 class="mb-4">Aircraft Gallery</h1>
 
 <!-- Dropdown --> 
 <div id="dropdown" class="dropdown">
@@ -57,3 +57,4 @@ else
 		}
 	</div>
 }
+</body>

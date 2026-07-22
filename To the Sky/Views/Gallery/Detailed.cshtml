@@ -4,12 +4,16 @@
     ViewData["Title"] = Model.Name;
 }
 
+
+<body class="background-image">
 <section class="hero-section mb-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
+                
                 <h1 class="display-4">@Model.Name</h1>
                 <p class="lead">@Model.DetailedDescription</p>
+
                 <dl class="row">
                     <dt class="col-sm-4">Manufacturer</dt>
                     <dd class="col-sm-8">@Model.Manufacturer</dd>
@@ -23,15 +27,17 @@
                     <dd class="col-sm-8">@Model.LastFlight</dd>
                 </dl>
             </div>
+            
             <div class="col-md-6">
                 <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded shadow-sm">
             </div>
+            
         </div>
     </div>
 </section>
 
 <section class="mb-5" id="history">
-    <h2>History</h2>
+    <h2 class="card-title">History</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <p class="card-text">@Model.History</p>
@@ -40,7 +46,7 @@
 </section>
 
 <section class="mb-5" id="development">
-    <h2>Development</h2>
+    <h2 class="card-title">Development</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <p class="card-text">@Model.Development</p>
@@ -49,7 +55,7 @@
 </section>
 
 <section class="mb-5" id="specifications">
-    <h2>Specifications</h2>
+    <h2 class="card-title">Specifications</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <p class="card-text">@Model.Specifications</p>
@@ -58,7 +64,7 @@
 </section>
 
 <section class="mb-5" id="operators">
-    <h2>Operators</h2>
+    <h2 class="card-title">Operators</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <p class="card-text">@Model.Operators</p>
@@ -67,7 +73,7 @@
 </section>
 
 <section class="mb-5" id="operational-history">
-    <h2>Operational History</h2>
+    <h2 class="card-title">Operational History</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <p class="card-text">@Model.OperationalHistory</p>
@@ -76,10 +82,12 @@
 </section>
 
 <section class="mb-5" id="image-more">
-    <h2>More Images</h2>
+    <h2 class="card-title">More Images</h2>
     <div class="card shadow-sm">
         <div class="card-body">
             <img src="@Model.ImageUrlMore" alt="@Model.Name additional image" class="img-fluid rounded">
         </div>
     </div>
 </section>
+
+</body>

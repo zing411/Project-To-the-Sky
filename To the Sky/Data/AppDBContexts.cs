@@ -96,6 +96,26 @@ public class AppDBContexts : DbContext
                 Operators = "Russian Aerospace Forces",
                 OperationalHistory = "Entered service in 1987 and has been modernized over the years to maintain its strategic capabilities.",
                 ImageUrlMore = "https://ml5psubhxdln.i.optimole.com/cb:78--.b845/w:1667/h:1080/q:96/f:best/https://migflug.com/wp-content/uploads/2026/07/tupolev-tu-160-blackjack-formation-flight.jpg"
+            },
+            
+            new AircraftModel()
+            {
+                Id = 5,
+                Name = "J-20 Might Dragon",
+                Manufacturer = "Chengdu Aircraft Corporation",
+                Category = "Fighter",
+                Country = "China",
+                FirstFlight = "2011",
+                LastFlight = "Active",
+                Description = "A twin-engine fifth generation stealth fighter, first fifth generation aircraft for the People's Liberation Army Air Force.",
+                DetailedDescription = "The J-20 is designed for long-range air superiority and precision strike missions, featuring stealth technology and advanced avionics.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/73/J-20_at_CCAS2022_%2820220827103424%29.jpg",
+                History = "Developed by the Chengdu Aircraft Corporation, the J-20 is a key component of China's modern air force.",
+                Development = "Designed to meet the needs of a modern air force, the J-20 features advanced stealth technology and avionics.",
+                Specifications = "Twin-engine fifth generation stealth fighter with a maximum speed of Mach 2.0 and a range of over 3,000 km.",
+                Operators = "People's Liberation Army Air Force",
+                OperationalHistory = "Entered service in 2011 and has been used in various operations since then.",
+                ImageUrlMore = "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2024/06/shutterstock_2347911499-16x9-cropped.jpg?q=49&fit=contain&w=750&h=422&dpr=2"
             });
     }
 }

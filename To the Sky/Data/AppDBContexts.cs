@@ -116,6 +116,26 @@ public class AppDBContexts : DbContext
                 Operators = "People's Liberation Army Air Force",
                 OperationalHistory = "Entered service in 2011 and has been used in various operations since then.",
                 ImageUrlMore = "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2024/06/shutterstock_2347911499-16x9-cropped.jpg?q=49&fit=contain&w=750&h=422&dpr=2"
+            },
+            
+            new AircraftModel()
+            {
+                Id = 6,
+                Name = "Dassault Rafale",
+                Manufacturer = "Dassault Aviation",
+                Category = "Multirole Fighter",
+                Country = "France",
+                FirstFlight = "1986 ",
+                LastFlight = "Active",
+                Description = "A French multirole fighter aircraft, the Rafale is known for its versatility and advanced avionics.",
+                DetailedDescription = "The Dassault Rafale is a twin-engine, canard configuration, multirole fighter designed and built by Dassault Aviation.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Rafale_-_RIAT_2009_%283751416421%29.jpg/1920px-Rafale_-_RIAT_2009_%283751416421%29.jpg",
+                History = "The Rafale was developed in the 1980s as a replacement for the Mirage 2000.",
+                Development = "Designed to meet the needs of a modern air force, the Rafale features advanced avionics and a wide range of mission capabilities.",
+                Specifications = "Twin-engine multirole fighter with a maximum speed of Mach 2.0 and a range of over 3,000 km.",
+                Operators = "French Air Force and Space Force, French Navy, Egyptian Air Force, Indian Air Force",
+                OperationalHistory = "Entered service in 1986 and has been used in various operations since then.",
+                ImageUrlMore = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Rafale_TNI_AU_over_the_country_%28T-0317_%26_T-0303%29%2C_2026.jpg/1920px-Rafale_TNI_AU_over_the_country_%28T-0317_%26_T-0303%29%2C_2026.jpg"
             });
     }
 }

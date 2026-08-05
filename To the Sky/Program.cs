@@ -4,7 +4,7 @@ using To_the_Sky.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register SQLite database context with dependency injection
+// register SQLite database context with dependency injection
 builder.Services.AddDbContext<AppDBContexts>( options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 

@@ -221,7 +221,98 @@ public class AppDBContexts : DbContext
                 Operators = "Primarily United States Army, also used by various other countries",
                 OperationalHistory =
                     "Entered service in 1979 and has been used in various military operations since then.",
-                ImageUrlMore = "https://i0.wp.com/unitedaerogroup.com/wp-content/uploads/2024/04/iStock-855861034.jpg?fit=724%2C483&ssl=1"
-            });
+                ImageUrlMore = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Croatian_UH-60_during_the_Air_Show.jpg/1920px-Croatian_UH-60_during_the_Air_Show.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            
+            new AircraftModel()
+                {
+            Id = 9,
+            Name = "Eurofighter Typhoon",
+            Manufacturer = "Eurofighter GmbH",
+            Category = "Multirole Fighter", 
+            Country = "UK, Germany, Italy, Spain",
+            FirstFlight = "1994",
+            LastFlight = "Active",
+            Description = "The Eurofighter Typhoon is a multinational twin-engine, supersonic canard delta wing fighter.",
+            DetailedDescription = "The Eurofighter Typhoon is a multinational twin-engine, supersonic canard delta wing fighter developed by Eurofighter GmbH.",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3c/RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            History = "The Eurofighter began in  1983 as a multi-nation European Fighter Project.",
+            Development = "Originally a 5-nation collaborative venture during the cold war, launched by UK, France, Germany, Italy and Spain. " +
+                          "But France withdrawal from the venture to develop their own aircraft which became the Rafale. While the core partnership remained with parts being made by each country.",
+            Specifications = "Twin-engine, canard-delta wing design. With a max speed of 1,550 miles and a service feeling of 55,000 feet",
+            Operators = "The primary operators are the Royal Air Force, German Air Force, Italian Air Force and Spanish Air and Space Force. With other country purchased the aircraft.",
+            OperationalHistory = "Entered service in 2003 and served as a multi-role air superiority fighter for Europe. Seeing deployments in Middle East and in Libya.",
+            ImageUrlMore = "https://aerospaceglobalnews.com/wp-content/uploads/2025/10/RS240080_RS222364_3110-IDEF25-IMAGES-SCREEN-OPTION-2A_hpr-1920x1080.jpg"
+            
+            },
+            
+            new AircraftModel()
+            {
+                Id = 10,
+                Name = "F-35 Lightning II",
+                Manufacturer = "Prime contractor: Lockheed Martin, partners: Northrop Grumman and BAE Systems",
+                Category = "Stealth Strike Fighter",
+                Country = "United States of America",
+                FirstFlight = "15 December 2006",
+                LastFlight = "Active",
+                Description = "An family of single-seat, single-engine, supersonic stealth strike fighters developed by NATO alliance members.",
+                DetailedDescription = "A multirole combat aircraft designed for air superiority and strike missions, it also has electronic warfare and intelligence, surveillance, and reconnaissance capabilities. The aircraft has three main variants: the conventional takeoff and landing F-35A, the short take-off and vertical-landing F-35B, and the catapult-assisted take-off but arrested recovery F-35C. With 883 aircraft in service as of 2025, it is the world's fourth-most-numerous military aircraft, and most-numerous stealth aircraft.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/F-35_Lightning_II_variants_in_flight_near_Eglin_AFB_in_2014.jpg/1280px-F-35_Lightning_II_variants_in_flight_near_Eglin_AFB_in_2014.jpg",
+                History = "The F-35 family was created under the Joint Strike Fighter program, intending to replace a myriad of preexisting  combat aircraft of the United States and it's allies.",
+                Development = "Designed to meet the needs of a future battlespace, the F-35 family features highly advanced avionics and a wide range of mission capabilities, combined with a design focused on stealth and lifting capacity.",
+                Specifications = "Twin-engine multirole fighter with a highly flexible mission profile, maximum speed of Mach 1.6 and a range making it capable of cross-Pacific combat.",
+                Operators = "United States, Italy, Japan, Australia, Denmark, Netherlands, Norway, Poland, South Korea, United Kingdom, Israel, Belgium, Canada, Czech Republic, Finland, Germany, Greece, Romania, Switzerland, Singapore",
+                OperationalHistory = "Entered service in 2015, and has been used in various operations since then by it's many operators.",
+                ImageUrlMore = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/CF-1_flight_test.jpg/1280px-CF-1_flight_test.jpg"
+            },
+            
+            
+            new AircraftModel()
+            {
+                Id = 11,
+                Name = "Sukhoi Su-27",
+                Manufacturer = "Sukhoi",
+                Category = "Fighter",
+                Country = "Russia",
+                FirstFlight = "1997",
+                LastFlight = "Active",
+                Description = "A Russian single-seat, twin-engine, all-weather fighter aircraft developed by Sukhoi.",
+                DetailedDescription = "The Sukhoi Su-27 is a highly maneuverable fighter aircraft with a focus on air superiority and ground attack capabilities. It is known for its exceptional performance in high-speed combat scenarios and its ability to operate in a wide range of weather conditions.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sukhoi_Su-27SKM_at_MAKS-2005_airshow.jpg/1920px-Sukhoi_Su-27SKM_at_MAKS-2005_airshow.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                History = "The Su-27 was developed in the 1980s as a response to the need for a modern, high-performance fighter aircraft. It has been widely used by the Russian Air Force and other nations.",
+                Development = "The Su-27 features a robust design with advanced avionics and a wide range of mission capabilities. It is equipped with powerful engines and a variety of weapons systems.",
+                Specifications = "Twin-engine, all-weather fighter with a maximum speed of Mach 2.35 and a range that allows it to conduct long-range missions.",
+                Operators = "Russia, India, China, Pakistan, Iraq, Syria, Iran, North Korea",
+                OperationalHistory = "The Su-27 has been in service since the 1990s and has been used in various operations by its many operators.",
+                ImageUrlMore = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ukrainian_Air_Force_Sukhoi_Su-27P_Flanker_%2829583343448%29.jpg/1920px-Ukrainian_Air_Force_Sukhoi_Su-27P_Flanker_%2829583343448%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            
+            new AircraftModel()
+            {
+                Id = 12,
+                Name = "Mikoyan MiG-29",
+                Manufacturer = "Mikoyan",
+                Category = "Fighter",
+                Country = "Russia",
+                FirstFlight = "1977",
+                LastFlight = "Active", 
+                Description = "A Soviet/Russian fourth-generation, twin engine supersonic fighter for air superiority and tactical combat.",
+                DetailedDescription = "The Mikoyan MiG-29 is a fourth-generation fighter aircraft designed for air superiority and tactical combat. " +
+                                      "It features a sleek design with advanced avionics and a wide range of mission capabilities. " +
+                                      "The aircraft is known for its high maneuverability and is equipped with powerful engines and a variety of weapons systems.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/VVS_100th_IMG_0691_%287727464290%29_%28cropped%29.jpg/1920px-VVS_100th_IMG_0691_%287727464290%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                History = "Developed in the Soviet Union during 1970s by the Mikoyan design bureau. Entered service in 1983 and built alongside the Sukhoi-27 to counter US fighters.",
+                Development = "The Mig-29 was designed to counter the new American jets like the F-16. The Soviet Air Force split the fighter requirements into" +
+                              " two categories, the Mig-29 was designed for the light tactical fighter (LFI) and the Su-27 was designed for heavy fighter project (TPFI).",
+                Specifications = "The Mig-29 is a twin-engine air-superiority jet. With a service feeling of 59,000 feet and a top speed of Mach 2.25.",
+                Operators = "Russia, India, China, North Korea, Iran, Syria, Iraq, Algeria, Bangladesh, Belarus, Bulgaria, Cuba, Czech Republic, Egypt, Eritrea, Ethiopia, Finland, Hungary, Indonesia, Kazakhstan, Malaysia, Moldova, Mongolia, Myanmar, North Macedonia, Poland, Romania, Slovakia",
+                OperationalHistory = "The MiG-29 has been in service since 1983 and has seen action in various conflicts, including the Soviet-Afghan War and the Iraq War.",
+                ImageUrlMore = "https://militarywatchmagazine.com/m/articles/2021/07/25/article_60fd92319e3338_38972999.jpeg"
+            
+            }              
+            
+            
+            
+            );
     }
 }

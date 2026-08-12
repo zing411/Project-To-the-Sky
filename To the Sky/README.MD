@@ -28,13 +28,17 @@ To the Sky/
 │   └── Shared/_Layout.cshtml   # Shared site layout and nav
 ├── wwwroot/
 │   ├── css/site.css            # Styling
-│   ├── js/site.js              # Country filter logic for gallery
+│   ├── js/site.js              # Country filter logic for aircraft gallery
 │   └── Images/                 # Local images
 ├── Program.cs                  # App startup, services, middleware, routes
-└── appsettings.json            # Connection string (SQLite)
+└── appsettings.json            # Connection string for SQLite
 
 
 ## How it Works
 
 Press the green arrow button at the top of the screen. If not, type in the console "dotnet build"
 The AppDBContexts is the seed aircraft data, and creates a SQLITE Database and that information is displayed within the website's gallery 
+
+## Requirements
+
+Requires a SDK of 10 of ASP.NET 

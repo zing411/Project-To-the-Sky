@@ -252,7 +252,7 @@ public class AppDBContexts : DbContext
                 Name = "F-35 Lightning II",
                 Manufacturer = "Prime contractor: Lockheed Martin, partners: Northrop Grumman and BAE Systems",
                 Category = "Stealth Strike Fighter",
-                Country = "United States of America",
+                Country = "USA",
                 FirstFlight = "15 December 2006",
                 LastFlight = "Active",
                 Description = "An family of single-seat, single-engine, supersonic stealth strike fighters developed by NATO alliance members.",

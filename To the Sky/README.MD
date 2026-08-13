@@ -41,4 +41,4 @@ The AppDBContexts is the seed aircraft data, and creates a SQLITE Database and t
 
 ## Requirements
 
-Requires a SDK of 10 of ASP.NET 
+Requires an SDK of 10 of ASP.NET 

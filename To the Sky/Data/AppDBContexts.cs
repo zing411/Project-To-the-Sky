@@ -207,7 +207,7 @@ public class AppDBContexts : DbContext
                 Name = "UH-60 Black Hawk",
                 Manufacturer = "Sikorsky Aircraft",
                 Category = "Utility helicopter",
-                Country = "United States",
+                Country = "USA",
                 FirstFlight = "1974",
                 LastFlight = "Active",
                 Description = "A four-blade, twin-engine, medium-lift utility helicopter.",
@@ -308,9 +308,28 @@ public class AppDBContexts : DbContext
                 Operators = "Russia, India, China, North Korea, Iran, Syria, Iraq, Algeria, Bangladesh, Belarus, Bulgaria, Cuba, Czech Republic, Egypt, Eritrea, Ethiopia, Finland, Hungary, Indonesia, Kazakhstan, Malaysia, Moldova, Mongolia, Myanmar, North Macedonia, Poland, Romania, Slovakia",
                 OperationalHistory = "The MiG-29 has been in service since 1983 and has seen action in various conflicts, including the Soviet-Afghan War and the Iraq War.",
                 ImageUrlMore = "https://militarywatchmagazine.com/m/articles/2021/07/25/article_60fd92319e3338_38972999.jpeg"
+            },
             
-            }              
-            
+            new AircraftModel()
+            {
+                Id = 13,
+                Name = "McDonnell Douglas F-15 Eagle",
+                Manufacturer = "McDonnell Douglas",
+                Category = "Fighter",
+                Country = "USA",
+                FirstFlight = "1972",
+                LastFlight = "Active",
+                Description = "An American fourth-generation, twin-engine, all-weather air-superiority fighter designed to gain and maintain control of the airspace.",
+                DetailedDescription = "The McDonnell F-15 Eagle is a fourth-generation twin engine-fighter aircraft originally designed for air superiority." +
+                                      "built in response of the Mig-25",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/F-15C_Eagle_from_the_44th_Fighter_Squadron_flies_during_a_routine_training_exercise_April_15%2C_2019.jpg/1280px-F-15C_Eagle_from_the_44th_Fighter_Squadron_flies_during_a_routine_training_exercise_April_15%2C_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                History = "Developed by McDonnell Douglas F-15 Eagle during late 1960s and early 1970s. Thie first prototype flew in 1972 entering in service in 1976 and developed to establish air dominance to counter the increasing capable Soviet fighter aircraft",
+                Development = "Designed to meet the needs of a modern air force, the F-15 features advanced avionics and a wide range of mission capabilities, combined with a design focused on speed and maneuverability.",
+                Specifications = "Twin-engine, all-weather fighter with a maximum speed of Mach 2.5 and high altitude operations. Has a large weapon capcity and has gotten several upgrades.",
+                Operators = "United States Air Force, Israeli Air Force, Saudi Arabian Air Force, and other allied air forces.",
+                OperationalHistory = "The F-15 has been in service since 1976 and has achived numerous air to air victories. With a unbeaten kill record of 106 to 0",
+                ImageUrlMore = "https://nationalsecurityjournal.org/wp-content/uploads/2025/12/F-15EX-Eagle-II.jpg"
+            }
             
             
             );
